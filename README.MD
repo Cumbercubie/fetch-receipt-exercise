@@ -1,8 +1,17 @@
 
 # RECEIPT PROCESSOR
+
+## TODO:
+- Add logging
+- Add real DB
+- Pre-calculate points for receipt
+- Standardize response object
+- Tests for handler and DB
 ## How to run:
 - Stand a project root
 - Run `go run main.go`
+
+
 ## Description
 Go Backend API server to manager receipts and points
 ### Endpoint: Process Receipts
