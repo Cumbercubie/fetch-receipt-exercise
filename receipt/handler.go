@@ -1,7 +1,6 @@
 package receipt
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
@@ -36,7 +35,6 @@ func (rh *RouteHandler) ProcessReceipt(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"message": err.Error()})
 		return
 	}
-	fmt.Println(receiptInput.PurchaseDate, receiptInput.PurchaseTime)
 
 	uuid, err := rh.receiptService.ProcessReceipt(receiptInput)
 	if err != nil {
@@ -73,7 +71,7 @@ func (rh *RouteHandler) GetReceiptPoints(c *gin.Context) {
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Quotes retrieved successfully",
+		"message": "Receipt points retrieved successfully",
 		"points":  points,
 	})
 }
